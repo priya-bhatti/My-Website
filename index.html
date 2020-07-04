@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Bhatti</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="name">PRIYA BHATTI</h1>
+        <input type="checkbox" class="toggle" id="toggle">
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#photography" class="nav-link">PHOTOGRAPHY</a></li>
+            </ul>
+        </nav>
+        <label for="toggle" class="toggle-label">
+            <span></span>
+        </label>
+    </header>
+    <div class="container layers" id="home">
+        <img src="images/bg_mountains.png" alt="Mountains" class="mountains lax" data-lax-translate-y="0 1, 30 -15">
+        <img src="images/back_wave.png" alt="back wave" class="wave_back lax" data-lax-translate-y="0 1, 30 -5">
+        <img src="images/orca.png" alt="Orca" class="orca lax" data-lax-translate-y="0 1, 50 60">
+        <img src="images/front_wave.png" alt="front wave" class="wave_front lax" data-lax-translate-y="0 1, 100 -50">
+        <img src="images/fg_multi_trees.png" alt="trees" class="trees lax" data-lax-translate-y="0 1, 70 -35">
+        <img src="images/fg_single_tree.png" alt="single tree" class="front_tree lax" data-lax-translate-y="0 1, 70 -35">
+        <img src="images/cliff_end.png" alt="cliff" class="cliff lax" data-lax-translate-y="0 1, 190 -250">
+        <div class="cover lax" data-lax-translate-y="0 1, 190 -210"></div>
+    </div>
+    <div class="container about" id="about">
+        <h1 class="about-hi">Hi</h1>
+        <div class="box-bio">
+            <p>I'm Priya. I'm a recent graduate from UBC with a BSc in Computer Science and Biology. As a former student Programmer Analyst with Statistics Canada and Fisheries and Oceans Canada I've gained valuable skills in programming with various technologies.
+                More recently I've been learning and developing my skills in front-end design and development.</p>
+            <p>I love learning new things, enjoy being in nature and observing wildlife. You can probably catch me at the local Vancouver trails and mountains!</p>
+            <p>Contact me at bhattip96@gmail.com or through the links below:</p>
+            <div class="social_icons">
+                <a href="download/Resume_priya_bhatti.pdf" download><img src="icons/CV.png" alt="CV"></a>
+                <a href="https://github.com/pulpnon-fiction" target="_blank"><img src="icons/GitHub.png" alt="Github"></a>
+                <a href="www.linkedin.com/in/itspriyabhatti" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/pbhatti_/" target="_blank"><img src="icons/instagram.png" alt="instagram"></a>
+            </div>
+        </div>
+        <img src="images/profile.png" alt="profile picture" class="profile">
+    </div>
+    <div class="container projects" id="projects">
+        <h1>Projects</h1>
+        <div class="prj_cards">
+            <div class="prj_card">
+                <div class="prj_imgs"></div>
+                <div class="info">
+                    <strong>This Website</strong>
+                    <p>some info here</p>
+                    <!-- icons of what was used to build the project -->
+                </div>
+            </div>
+            <div class="prj_card">
+                <div class="prj_imgs">
+                </div>
+                <div class="info">
+                    <strong>My Title</strong>
+                    <p>some info here</p>
+                    <!-- icons of what was used to build the project -->
+                </div>
+            </div>
+            <div class="prj_card">
+                <div class="prj_imgs"></div>
+                <div class="info">
+                    <strong>My Title</strong>
+                    <p>some info here</p>
+                    <!-- icons of what was used to build the project -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container photography" id="photography">
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script>
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
+</body>
+
+</html>

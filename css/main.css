@@ -377,7 +377,7 @@ nav a:hover {
 }
 
 .projects {
-  border: 2px solid black;
+  border: 2px solid white;
   min-height: 100vh;
   height: auto;
 }
@@ -455,7 +455,7 @@ nav a:hover {
 }
 
 .photography {
-  border: 2px solid black;
+  border: 2px solid white;
 }
 
 .photography h1 {
@@ -584,5 +584,16 @@ nav a:hover {
     top: 60%;
     left: 35%;
   }
+}
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 10px 0;
 }
 /*# sourceMappingURL=main.css.map */

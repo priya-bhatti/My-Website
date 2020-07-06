@@ -2,6 +2,7 @@ html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    overscroll-behavior-y: none;
 }
 
 body {
@@ -351,9 +352,9 @@ nav a:hover {
 }
 
 .projects h1 {
-    font-size: 60pt;
+    font-size: 36pt;
     font-weight: lighter;
-    margin-left: 10px;
+    margin: 50px 0 10px 10px;
 }
 
 .prj_cards {
@@ -410,7 +411,67 @@ nav a:hover {
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .projects h1 {
+        font-size: 60pt;
+    }
+}
+
 //////////////////////////////////////Photography Page//////////////////////////////////////
 .photography {
-    background: green;
+    border: 2px solid black;
+}
+
+.photography h1 {
+    font-size: 36pt;
+    font-weight: lighter;
+    margin: 50px 0 10px 10px;
+}
+
+.glide {
+    top: 5%;
+}
+
+.glide__slides {
+    overflow: visible;
+    padding: 10px 0 70px 0;
+}
+
+.glide__slide {
+    opacity: .5;
+    //transition: .2s linear;
+    transform: scale(0.8);
+    transition: all ease 0.1s;
+}
+
+.glide__slide img {
+    width: 100%;
+    box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.488);
+}
+
+.glide__slide--active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.glide__arrows .glide__arrow {
+    border: none;
+    border-radius: 50%;
+    color: black;
+}
+
+.glide__bullet {
+    background: #888888;
+    width: 12px;
+    height: 12px;
+}
+
+.glide__bullet--active {
+    background: black;
+}
+
+@media only screen and (min-width: 600px) {
+    .photography h1 {
+        font-size: 60pt;
+    }
 }

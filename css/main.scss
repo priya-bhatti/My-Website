@@ -1,5 +1,5 @@
 html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     scroll-behavior: smooth;
     overscroll-behavior-y: none;
@@ -428,12 +428,50 @@ nav a:hover {
     margin: 50px 0 10px 10px;
 }
 
+.photography .photoToggle {
+    opacity: 0;
+    //position: absolute;
+}
+
+.photography .photoToggle:checked+.labeltoggle .ball {
+    transform: translateX(-85px);
+}
+
+.photography .labeltoggle {
+    position: relative;
+    background-color: #FDFDFD;
+    box-shadow: 0px 3px 6px 0px #000000ab;
+    color: black;
+    display: flex;
+    border-radius: 50px;
+    margin-left: 10px;
+    padding: 5px;
+    height: 26px;
+    width: 175px;
+    align-items: center;
+    justify-content: space-between;
+    .portrait_span {
+        margin-left: 8px;
+    }
+    .ball {
+        box-shadow: 0 2px 5px 0px black;
+        background: #fdfdfd;
+        position: absolute;
+        height: 20px;
+        width: 85px;
+        top: 3px;
+        right: 3px;
+        border-radius: 50px;
+        transition: transform 0.2s linear;
+    }
+}
+
 .glide {
     top: 5%;
 }
 
 .glide__slides {
-    overflow: visible;
+    //overflow: visible;
     padding: 10px 0 70px 0;
 }
 
@@ -473,5 +511,20 @@ nav a:hover {
 @media only screen and (min-width: 600px) {
     .photography h1 {
         font-size: 60pt;
+    }
+    .photography .banner {
+        display: grid;
+        width: 100%;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+    }
+    .photography h1 {
+        grid-column: 1 / 2;
+    }
+    .photography .labeltoggle {
+        grid-column: 2 / 3;
+        position: absolute;
+        top: 60%;
+        left: 35%;
     }
 }

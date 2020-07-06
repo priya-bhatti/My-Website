@@ -1,6 +1,6 @@
 html {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
   overflow-y: scroll;
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
@@ -464,12 +464,62 @@ nav a:hover {
   margin: 50px 0 10px 10px;
 }
 
+.photography .photoToggle {
+  opacity: 0;
+}
+
+.photography .photoToggle:checked + .labeltoggle .ball {
+  -webkit-transform: translateX(-85px);
+          transform: translateX(-85px);
+}
+
+.photography .labeltoggle {
+  position: relative;
+  background-color: #FDFDFD;
+  -webkit-box-shadow: 0px 3px 6px 0px #000000ab;
+          box-shadow: 0px 3px 6px 0px #000000ab;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding: 5px;
+  height: 26px;
+  width: 175px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.photography .labeltoggle .portrait_span {
+  margin-left: 8px;
+}
+
+.photography .labeltoggle .ball {
+  -webkit-box-shadow: 0 2px 5px 0px black;
+          box-shadow: 0 2px 5px 0px black;
+  background: #fdfdfd;
+  position: absolute;
+  height: 20px;
+  width: 85px;
+  top: 3px;
+  right: 3px;
+  border-radius: 50px;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
 .glide {
   top: 5%;
 }
 
 .glide__slides {
-  overflow: visible;
   padding: 10px 0 70px 0;
 }
 
@@ -512,6 +562,27 @@ nav a:hover {
 @media only screen and (min-width: 600px) {
   .photography h1 {
     font-size: 60pt;
+  }
+  .photography .banner {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    position: relative;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .photography h1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .photography .labeltoggle {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    position: absolute;
+    top: 60%;
+    left: 35%;
   }
 }
 /*# sourceMappingURL=main.css.map */

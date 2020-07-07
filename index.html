@@ -186,9 +186,6 @@
             </div>
         </div>
     </div>
-    <footer>
-        <small>&copy; Priya Bhatti 2020</small>
-    </footer>
     <script>
         new Glide(".portraits", {
             type: 'carousel',
@@ -224,12 +221,15 @@
         const photoToggle = document.getElementById('photoToggle');
         photoToggle.addEventListener('change', () => {
             if (document.getElementById('photoToggle').checked) {
-                document.getElementById('portraits').style.display = 'none';
-                document.getElementById('landscapes').style.display = 'block';
+                document.getElementById('portraits').style.visibility = 'hidden';
                 document.getElementById('landscapes').style.visibility = 'visible';
+                document.getElementById('portraits').style.opacity = '0';
+                document.getElementById('landscapes').style.opacity = '1';
             } else {
-                document.getElementById('portraits').style.display = 'block';
-                document.getElementById('landscapes').style.display = 'none';
+                document.getElementById('portraits').style.visibility = 'visible';
+                document.getElementById('landscapes').style.visibility = 'hidden';
+                document.getElementById('portraits').style.opacity = '1';
+                document.getElementById('landscapes').style.opacity = '0';
 
             }
         })
@@ -248,6 +248,9 @@
             window.requestAnimationFrame(updateLax)
         }
     </script>
+    <footer>
+        <small>&copy; Priya Bhatti 2020</small>
+    </footer>
 </body>
 
 </html>

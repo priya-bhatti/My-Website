@@ -1,5 +1,5 @@
 html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     scroll-behavior: smooth;
     overscroll-behavior-y: none;
@@ -186,7 +186,7 @@ nav a:hover {
 .wave_front,
 .trees,
 .front_tree,
-.cover,
+// .cover,
 .cliff {
     position: absolute; //stack on top of eachother
     z-index: -1; //want the text to be visible on top
@@ -211,7 +211,7 @@ nav a:hover {
 }
 
 //mobile:
-@media screen and (max-width:800px) {
+@media screen and (max-width:1024px) {
     .mountains,
     .wave_back,
     .orca,
@@ -219,18 +219,18 @@ nav a:hover {
     .trees,
     .front_tree,
     .cliff {
-        top: 25%;
+        top: 35%;
     }
-    .cover {
-        position: absolute;
-        background-color: #ffffff;
-        height: 30%;
-        top: 70%;
-        z-index: 1;
-    }
-    .cliff {
-        z-index: 2;
-    }
+    // .cover {
+    //     position: absolute;
+    //     background-color: #ffffff;
+    //     height: 30%;
+    //     top: 70%;
+    //     z-index: 1;
+    // }
+    // .cliff {
+    //     z-index: 2;
+    // }
     #orca-large {
         visibility: hidden;
     }
@@ -448,6 +448,7 @@ nav a:hover {
 //////////////////////////////////////Photography Page//////////////////////////////////////
 .photography {
     border: 2px solid white;
+    position: relative;
 }
 
 .photography h1 {
@@ -494,8 +495,19 @@ nav a:hover {
     }
 }
 
+.portraits {
+    z-index: 1;
+    top: 25%;
+}
+
+.landscapes {
+    z-index: 30;
+    top: 30%;
+}
+
 .glide {
-    top: 5%;
+    position: absolute;
+    transition: opacity 0.5ms;
 }
 
 .glide__slides {
@@ -505,7 +517,6 @@ nav a:hover {
 
 .glide__slide {
     opacity: .5;
-    //transition: .2s linear;
     transform: scale(0.8);
     transition: all ease 0.1s;
 }
@@ -528,12 +539,18 @@ nav a:hover {
 
 .glide__bullet {
     background: #888888;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
 }
 
 .glide__bullet--active {
     background: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .portraits {
+        top: 30%;
+    }
 }
 
 @media only screen and (min-width: 600px) {

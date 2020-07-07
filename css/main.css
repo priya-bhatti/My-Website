@@ -1,6 +1,6 @@
 html {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
   overflow-y: scroll;
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
@@ -218,7 +218,6 @@ nav a:hover {
 .wave_front,
 .trees,
 .front_tree,
-.cover,
 .cliff {
   position: absolute;
   z-index: -1;
@@ -242,7 +241,7 @@ nav a:hover {
   visibility: hidden;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .mountains,
   .wave_back,
   .orca,
@@ -250,17 +249,7 @@ nav a:hover {
   .trees,
   .front_tree,
   .cliff {
-    top: 25%;
-  }
-  .cover {
-    position: absolute;
-    background-color: #ffffff;
-    height: 30%;
-    top: 70%;
-    z-index: 1;
-  }
-  .cliff {
-    z-index: 2;
+    top: 35%;
   }
   #orca-large {
     visibility: hidden;
@@ -484,6 +473,7 @@ nav a:hover {
 
 .photography {
   border: 2px solid white;
+  position: relative;
 }
 
 .photography h1 {
@@ -543,8 +533,20 @@ nav a:hover {
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
+.portraits {
+  z-index: 1;
+  top: 25%;
+}
+
+.landscapes {
+  z-index: 30;
+  top: 30%;
+}
+
 .glide {
-  top: 5%;
+  position: absolute;
+  -webkit-transition: opacity 0.5ms;
+  transition: opacity 0.5ms;
 }
 
 .glide__slides {
@@ -579,12 +581,18 @@ nav a:hover {
 
 .glide__bullet {
   background: #888888;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
 }
 
 .glide__bullet--active {
   background: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .portraits {
+    top: 30%;
+  }
 }
 
 @media only screen and (min-width: 600px) {

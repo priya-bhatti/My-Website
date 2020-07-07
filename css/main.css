@@ -1,6 +1,6 @@
 html {
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
@@ -487,24 +487,23 @@ nav a:hover {
 }
 
 .photography .photoToggle:checked + .labeltoggle .ball {
-  -webkit-transform: translateX(-85px);
-          transform: translateX(-85px);
+  -webkit-transform: translateX(-83px);
+          transform: translateX(-83px);
 }
 
 .photography .labeltoggle {
   position: relative;
   background-color: #FDFDFD;
-  -webkit-box-shadow: 0px 3px 6px 0px #000000ab;
-          box-shadow: 0px 3px 6px 0px #000000ab;
+  border: 1px solid grey;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 50px;
-  margin-left: 10px;
+  margin-left: 12px;
   padding: 5px;
-  height: 26px;
-  width: 175px;
+  height: 28px;
+  width: 190px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -514,16 +513,16 @@ nav a:hover {
 }
 
 .photography .labeltoggle .portrait_span {
-  margin-left: 8px;
+  margin-left: 1px;
 }
 
 .photography .labeltoggle .ball {
-  -webkit-box-shadow: 0 2px 5px 0px black;
-          box-shadow: 0 2px 5px 0px black;
-  background: #fdfdfd;
+  -webkit-box-shadow: 0 3px 9px 0px #b5b5b5;
+          box-shadow: 0 3px 9px 0px #b5b5b5;
+  background: black;
   position: absolute;
   height: 20px;
-  width: 85px;
+  width: 100px;
   top: 3px;
   right: 3px;
   border-radius: 50px;

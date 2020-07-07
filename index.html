@@ -31,13 +31,37 @@
     <div class="container layers" id="home">
         <img src="images/bg_mountains.png" alt="Mountains" class="mountains lax" data-lax-translate-y="0 1, 30 -15">
         <img src="images/back_wave.png" alt="back wave" class="wave_back lax" data-lax-translate-y="0 1, 30 -5">
-        <img src="images/orca.png" alt="Orca" class="orca lax" data-lax-translate-y="0 1, 50 60">
+        <img src="images/orca.png" alt="Orca" class="orca lax" id="orca-large" data-lax-translate-y="0 1, 50 80">
+        <img src="images/orca.png" alt="Orca" class="orca lax" id="orca-small" data-lax-translate-y="0 1, 50 30">
         <img src="images/front_wave.png" alt="front wave" class="wave_front lax" data-lax-translate-y="0 1, 100 -50">
         <img src="images/fg_multi_trees.png" alt="trees" class="trees lax" data-lax-translate-y="0 1, 70 -35">
         <img src="images/fg_single_tree.png" alt="single tree" class="front_tree lax" data-lax-translate-y="0 1, 70 -35">
-        <img src="images/cliff_end.png" alt="cliff" class="cliff lax" data-lax-translate-y="0 1, 190 -250">
-        <div class="cover lax" data-lax-translate-y="0 1, 190 -210"></div>
+        <img src="images/cliff_end.png" alt="cliff" class="cliff lax" id="cliff-large" data-lax-translate-y="0 1, 190 -250">
+        <img src="images/cliff_end.png" alt="cliff" class="cliff lax" id="cliff-small" data-lax-translate-y="0 1, 190 -180">
+        <div class="cover lax" data-lax-translate-y="0 1, 190 -150"></div>
     </div>
+
+    <!-- <script>
+        function paralaxAdjust() {
+            if (window.matchMedia("(max-width: 800px)").matches) {
+                var attr = document.createAttribute('data-lax-translate-y');
+                attr.value = "0 1, 50 30";
+                document.getElementById("orca").setAttributeNode(attr);
+                var attr2 = document.createAttribute('data-lax-translate-y');
+                attr2.value = "0 1, 190 -180"
+                document.getElementById("cliff").setAttributeNode(attr2);
+            } else {
+                var attr = document.createAttribute('data-lax-translate-y');
+                attr.value = "0 1, 50 60";
+                document.getElementById("orca").setAttributeNode(attr);
+                var attr2 = document.createAttribute('data-lax-translate-y');
+                attr2.value = "0 1, 190 -250"
+                document.getElementById("cliff").setAttributeNode(attr2);
+            }
+        }
+        paralaxAdjust();
+        window.matchMedia("(max-width: 800px)").addListener(paralaxAdjust());
+    </script> -->
     <div class="container about" id="about">
         <h1 class="about-hi">Hi</h1>
         <div class="box-bio">

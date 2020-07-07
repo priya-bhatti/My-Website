@@ -1,5 +1,5 @@
 html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
     overscroll-behavior-y: none;
@@ -196,6 +196,9 @@ nav a:hover {
 
 //mobile:
 @media screen and (max-width:800px) {
+    .layers {
+        height: 80vh;
+    }
     .mountains,
     .wave_back,
     .orca,
@@ -208,9 +211,9 @@ nav a:hover {
     .cover {
         position: absolute;
         background-color: #ffffff;
-        height: 30%;
-        top: 70%;
-        z-index: 1;
+        height: 40%;
+        top: 80%;
+        z-index: 5;
     }
     .cliff {
         z-index: 2;

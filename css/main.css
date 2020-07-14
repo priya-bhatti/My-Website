@@ -449,6 +449,10 @@ nav a:hover {
   background-image: url(../images/projects/project2.png);
 }
 
+.prj3 {
+  background-image: url(../images/projects/project3.png);
+}
+
 .info {
   padding: 0.5rem 1rem 0 1rem;
 }
@@ -473,6 +477,10 @@ nav a:hover {
 
 .prj_card:hover .prj2 {
   background-image: url(../images/projects/project2.gif);
+}
+
+.prj_card:hover .prj3 {
+  background-image: url(../images/projects/project3.gif);
 }
 
 @media only screen and (min-width: 600px) {

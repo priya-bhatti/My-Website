@@ -1,6 +1,6 @@
 html {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
   overflow-y: scroll;
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
